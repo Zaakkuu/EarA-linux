@@ -147,6 +147,19 @@ MODELS_BY_BASE: dict[str, Model] = {
         in_ear=False,
         ear_tip_fit=False,
     ),
+    # Ear (3): verified against fw 1.0.1.69 (2026-11-11, dump in upstream
+    # issue #29). Real Nothing base code unknown — SH serial prefix is "10",
+    # which collides with Ear (1), so detection is name-based (SH/BH serials
+    # already resolve by name in session._resolve_model).
+    "ear3": Model(
+        name="Nothing Ear (3)",
+        base="ear3",
+        family="ear3",
+        bass_enhance=True,
+        ear_tip_fit=False,  # fit-test flow not yet exercised
+        personalized_anc=False,  # cmd 0x20: no response on Ear (3)
+        listening_mode=False,  # cmd 0x50: no response on Ear (3)
+    ),
 }
 
 # Serial SKU fragment → model base. First two digits of many serials.
@@ -193,6 +206,8 @@ def model_from_serial(serial: str | None) -> Model:
 def model_from_name(name: str) -> Model:
     value = (name or "").lower()
     mapping = [
+        ("ear (3)", "ear3"),
+        ("ear(3)", "ear3"),
         ("ear (a)", "B162"),
         ("ear(a)", "B162"),
         ("ear (open)", "B174"),

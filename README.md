@@ -74,6 +74,7 @@ This installs `eara` to `~/.local/bin` and adds EarA to the application menu.
 ## Device support
 
 **Nothing Ear (a)** is validated end to end. **CMF Buds 2** has tested battery reporting, listening modes, EQ, and Bluetooth audio support.
+**Nothing Ear (3)** is tested on firmware 1.0.1.69 (battery, ANC, EQ presets + custom shapes + bass enhance, low latency, gestures); personalized ANC and listening modes are absent on this model. Protocol dump: upstream issue #29.
 
 EarA also includes profiles for other Nothing and CMF models that use the same RFCOMM protocol family. Their individual controls still need community testing. See the [device matrix](LINEUP.md) for the current status.
 

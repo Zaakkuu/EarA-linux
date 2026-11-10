@@ -14,6 +14,7 @@ and EarA is not an official vendor product.
 | Nothing Ear (2) | B155 | host BT | full + personal ANC | yes | yes | yes | protocol origin |
 | Nothing Ear (a) | B162 | **tested** | full | presets + bass | yes | yes | this repo’s reference device |
 | Nothing Ear (2024) | B171 | host BT | full | yes + bass | yes | yes | same family as Ear (a) |
+| Nothing Ear (3) | ear3 | **tested** | full (adaptive untested) | presets + custom + bass | yes | — | fw 1.0.1.69; channel 15 works but SDP hides the NT UUID; serial prefix "10" collides with Ear (1) → name-based detection; personal ANC + listening mode cmds get no response; dump in upstream issue #29 |
 | Nothing Ear (open) | B174 | host BT | no | limited | limited | no | open-ear; untested here |
 | CMF Buds | B168 | host BT | via listening mode | listening + bass | yes | — | |
 | CMF Buds Pro | B163 | host BT | yes | yes | yes | yes | |
